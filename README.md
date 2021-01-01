@@ -9,6 +9,13 @@ However despite the importance of the app, it’s notoriously hard to monitor. U
 
 As such, I have created a tutorial for training a deep learning model to recognize a specific face on the app. (The face I have chosen is President Trump, however any face can be used. In fact, any image can be used. For example if you wanted to train the model to recognize confederate flags on the app, you can just swap the training data for images of confederate flags). This model is then used by a separate python script that will call a tiktok scraping api, and which can be run in the background of any computer, monitoring for potential appearances of Trump on the app. This will allow journalists to be alerted every time the president is trending on the app.
 
+## Deep Learning
+Deep Learning is a subfield of machine learning that relies on creating artificial neural networks to make predictions. It is incredibly powerful and is used in everything from auto-subtitling movies to powering self-driving cars. The structure of the neural networks also makes it especially good at recognizing complex features like faces in images. For this project, I chose Deep Learning to base my models off of because TikTok videos can be broken down into component images and these images can be used to train a powerful Deep Learning model. 
+
+To learn more about deep learning visit here: https://machinelearningmastery.com/what-is-deep-learning/
+
+The current two biggest libraries for deep learning are PyTorch and Tensorflow. While both have their advantages, Tensorflow is used for this project because I wanted to use colab to train my model (because of the free access to GPUs) and Tensorflow has better compatibility with colab. However in the future, if this project is to be improved on, PyTorch can also be used as a substitute. 
+
 ### TikTok scraper
 TikTok does not currently have an accessible api, and so an open-source scraper was used for this project. I choose to use tiktok-scraper by github user drawrowfly, but you are welcome to use any of the tiktok scrapers available to you, you only need to adjust that part in the shell script accordingly.
 Tiktok scraper used for project: https://github.com/drawrowfly/tiktok-scraper
