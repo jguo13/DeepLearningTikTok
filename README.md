@@ -12,3 +12,6 @@ As such, I have created a tutorial for training a deep learning model to recogni
 ### TikTok scraper
 TikTok does not currently have an accessible api, and so an open-source scraper was used for this project. I choose to use tiktok-scraper by github user drawrowfly, but you are welcome to use any of the tiktok scrapers available to you, you only need to adjust that part in the shell script accordingly.
 Tiktok scraper used for project: https://github.com/drawrowfly/tiktok-scraper
+
+### "DeepLearning_Model_Tiktok.ipynb"
+The model is created using a colab notebook. The jupyter notebook version of that has been uploaded to this repo under this file. To create the model, you should upload the notebook into google colab (which is free) and run the cells. This will then output an h5 file of the finished, trained model which you will then download onto your local. The model 
