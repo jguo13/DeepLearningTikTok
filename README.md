@@ -16,6 +16,9 @@ To learn more about deep learning visit here: https://machinelearningmastery.com
 
 The current two biggest libraries for deep learning are PyTorch and Tensorflow. While both have their advantages, Tensorflow is used for this project because I wanted to use colab to train my model (because of the free access to GPUs) and Tensorflow has better compatibility with colab. However in the future, if this project is to be improved on, PyTorch can also be used as a substitute. 
 
+## Components of this project
+This project has several files that work together, each detailed below. To run the project, download the model from the DeepLearning_Model_Tiktok.ipynb, then put it in a parallel directory to the run.sh script, then run that script via the command "sh run.sh".
+
 ### TikTok scraper
 TikTok does not currently have an accessible api, and so an open-source scraper was used for this project. I choose to use tiktok-scraper by github user drawrowfly, but you are welcome to use any of the tiktok scrapers available to you, you only need to adjust that part in the shell script accordingly.
 Tiktok scraper used for project: https://github.com/drawrowfly/tiktok-scraper
