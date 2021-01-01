@@ -46,6 +46,14 @@ To run this, you might have to run “chmod +x run.sh” first on the file to ma
 This directory is where the run_model.py will place all the captured images from the video. It just needs to exist as an empty directory parallel to wherever you run the shell script so that the run_model.py can create images inside it. 
 
 
+## Future work
+Currently, the major weaknesses of this project is that the TikTok scraper is not always reliable, most likely because TikTok itself has implemented anti-scraping measures on its app. As such you need to sometimes run the run.sh script multiple times before a trending video will download. However because that part is relatively isolated from the rest of the project, it can be easily replaced or improved on without a major overhaul of the whole design of the project. 
+
+Another limitation is that this model can really only be trained to recognize one specific thing, such as one person’s face or one specific symbol. As such if you wanted it to recognize, for example, a few different presidential candidates, you would need to relabel all the images and redesign the model, since the output layer would need to have bigger dimensions to accommodate the additional labels. 
+
+I also found that the model had trouble distinguishing between parodies of Trump (for example when someone dresses up like Trump and pretends to move like him) and actual videos of trump. It also did not pick up on any drawings of Trump (for example, if a TikTok user drew a cartoon of Trump and had it talk or move throughout the video, the model did not pick up on this). If a journalist would like all of these cases to be picked up by the model as recognizing Trump, they need only to add more examples of such cases in the training data. For example, if you want drawings of Trump to be picked up by the model, you need to add images with drawings of Trump labeled as having Trump in them in the training data. If you do not want parodies of Trump to be picked up by the model as a positive label, you need to add videos that have parodies of Trump and explicitly label them as a negative label. In this way you can ensure against these specific “close” cases that might throw off your model.
+
+In the future, to improve upon these designs, more data should be used in training. Currently this project uses 505 images, however to create a really accurate model you would need several, several times that amount. In addition, new designs can be explored for the models, such as adding more layers in the model and changing the number of neurons in each layer. The training process can also be edited--for example increasing or decreasing the epochs. I adjusted this value so that the model did not overfit the data, however you might find that adjusting the variable one more time may produce better results. 
 
 
 ### Acknowledgments
