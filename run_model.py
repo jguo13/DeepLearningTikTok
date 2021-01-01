@@ -11,12 +11,13 @@ from keras.applications.vgg16 import preprocess_input
 
 
 def run_model(file_name):
-	video = file_name
+
 	model = tf.keras.models.load_model('trumpbiden_model_final.h5')
 	base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))    # include_top=False to remove the top layer
 
 	count = 0
-	videoFile = file_name
+	videoFile = "trend/" + file_name
+	print(videoFile)
 	cap = cv2.VideoCapture(videoFile)
 	frameRate = cap.get(5) #frame rate
 	x=1
@@ -37,7 +38,7 @@ def run_model(file_name):
 
 	test_image = []
 	for img_name in test_imagenames:
-	    img = plt.imread('' + img_name)
+	    img = plt.imread('' + 'test_imgs/' + img_name)
 	    test_image.append(img)
 	test_img = np.array(test_image)
 
