@@ -30,7 +30,7 @@ This python file is what generates the model’s prediction on the video. This f
 ### “run.sh”
 This is a shell script that first calls the tiktok api to retrieve the number 1 trending video on tiktok, downloads it into a directory called trends, then feeds that file name to run_model.py to make a prediction off of. It’s fairly simple and is only meant to show how the flow should look like. To make it run continuously is also relatively easy--you can just wrap it in a while loop, or you can schedule it to run at a certain time every day via a cron job. 
 
-### test_imgs
+### "test_imgs"
 This directory is where the run_model.py will place all the captured images from the video. It just needs to exist as an empty directory parallel to wherever you run the shell script so that the run_model.py can create images inside it. 
 
 
