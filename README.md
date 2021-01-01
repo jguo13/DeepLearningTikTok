@@ -20,7 +20,7 @@ The current two biggest libraries for deep learning are PyTorch and Tensorflow. 
 This project has several files that work together, each detailed below. To run the project, download the model from the DeepLearning_Model_Tiktok.ipynb, then put it in a parallel directory to the run.sh script, then run that script via the command "sh run.sh".
 
 ### TikTok scraper
-TikTok does not currently have an accessible api, and so an open-source scraper was used for this project. I choose to use tiktok-scraper by github user drawrowfly, but you are welcome to use any of the tiktok scrapers available to you, you only need to adjust that part in the shell script accordingly.
+TikTok does not currently have an accessible api, and so an open-source scraper was used for this project. I choose to use tiktok-scraper by github user drawrowfly, but you are welcome to use any of the tiktok scrapers available to you, you only need to adjust that part in the shell script accordingly. This tiktok scraper also does not need a login, so you can be sure you are not scraping a custom trending page but rather the generic trending page for all users on the app.
 Tiktok scraper used for project: https://github.com/drawrowfly/tiktok-scraper
 
 ### "DeepLearning_Model_Tiktok.ipynb"
