@@ -24,8 +24,14 @@ The model is created using a colab notebook. The jupyter notebook version of tha
 
 4. Saving the model: We then save the model as an h5 file and download it to our local. You should then move the model to the same directory as this github repo. When you run your shell script, it will call the model and expect it to be in the same parallel directory.
 
+### “run_model.py”
+This python file is what generates the model’s prediction on the video. This file will load the pretrained model via the h5 file from the jupyter notebook, and then it will take an input video filename (which will be supplied by the shell script) and convert that video into images based on a capture frame rate of 5 frames/second. It will then run a prediction on each of those images, first by feeding the image through the VGG16 model from the keras library to extract features, and then running those features through our pretrained model. If there are any 1 labels predicted, we output that Trump has been spotted in a video. Currently, it is just a print statement however to connect it to an email alert is reasonably easy, simply have the output of the function call the email alert api.
 
+### “run.sh”
+This is a shell script that first calls the tiktok api to retrieve the number 1 trending video on tiktok, downloads it into a directory called trends, then feeds that file name to run_model.py to make a prediction off of. It’s fairly simple and is only meant to show how the flow should look like. To make it run continuously is also relatively easy--you can just wrap it in a while loop, or you can schedule it to run at a certain time every day via a cron job. 
 
+### test_imgs
+This directory is where the run_model.py will place all the captured images from the video. It just needs to exist as an empty directory parallel to wherever you run the shell script so that the run_model.py can create images inside it. 
 
 
 
