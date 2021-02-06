@@ -12,7 +12,7 @@ As such, I have created a tutorial for training a deep learning model to recogni
 ## Deep Learning
 Deep Learning is a subfield of machine learning that relies on creating artificial neural networks to make predictions. It is incredibly powerful and is used in everything from auto-subtitling movies to powering self-driving cars. The structure of the neural networks also makes it especially good at recognizing complex features like faces in images. For this project, I chose Deep Learning to base my models off of because TikTok videos can be broken down into component images and these images can be used to train a powerful Deep Learning model. 
 
-To learn more about deep learning visit here: https://machinelearningmastery.com/what-is-deep-learning/
+To learn more about deep learning n general visit here: https://machinelearningmastery.com/what-is-deep-learning/
 
 The current two biggest libraries for deep learning are PyTorch and Tensorflow. While both have their advantages, Tensorflow is used for this project because I wanted to use colab to train my model (because of the free access to GPUs) and Tensorflow has better compatibility with colab. However in the future, if this project is to be improved on, PyTorch can also be used as a substitute. 
 
